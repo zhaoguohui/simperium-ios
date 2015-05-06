@@ -23,7 +23,13 @@
 		26156AF714EC405F003332BA /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = 26156AF614EC405F003332BA /* Todo.m */; };
 		26C93A7514F86D1800BE99F5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C93A7214F86D1800BE99F5 /* icon.png */; };
 		26C93A7614F86D1800BE99F5 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C93A7314F86D1800BE99F5 /* icon@2x.png */; };
-		C4D4D4AE1AF9DCD10097F51A /* libSimperium.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D4D4A91AF9DCAD0097F51A /* libSimperium.a */; };
+		C4D4D4B01AF9DDE20097F51A /* Simperium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D4D4AF1AF9DDE20097F51A /* Simperium.framework */; };
+		C4D4D4B21AF9DDF80097F51A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D4D4B11AF9DDF80097F51A /* MobileCoreServices.framework */; };
+		C4D4D4B41AF9DE090097F51A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D4D4B31AF9DE090097F51A /* Security.framework */; };
+		C4D4D4B61AF9DE1D0097F51A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D4D4B51AF9DE1D0097F51A /* CFNetwork.framework */; };
+		C4D4D4B91AF9DE600097F51A /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D4D4B81AF9DE600097F51A /* libicucore.dylib */; };
+		C4D4D4BB1AF9DE660097F51A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D4D4BA1AF9DE660097F51A /* libz.dylib */; };
+		C4D4D4BD1AF9DE760097F51A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D4D4BC1AF9DE760097F51A /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +81,13 @@
 		26C93A7214F86D1800BE99F5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		26C93A7314F86D1800BE99F5 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		C4D4D4A11AF9DCAD0097F51A /* Simperium.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Simperium.xcodeproj; path = ../../../Simperium.xcodeproj; sourceTree = "<group>"; };
+		C4D4D4AF1AF9DDE20097F51A /* Simperium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Simperium.framework; path = ../../out/Simperium.framework; sourceTree = "<group>"; };
+		C4D4D4B11AF9DDF80097F51A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C4D4D4B31AF9DE090097F51A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C4D4D4B51AF9DE1D0097F51A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C4D4D4B81AF9DE600097F51A /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		C4D4D4BA1AF9DE660097F51A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		C4D4D4BC1AF9DE760097F51A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +95,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4D4D4AE1AF9DCD10097F51A /* libSimperium.a in Frameworks */,
+				C4D4D4BD1AF9DE760097F51A /* SystemConfiguration.framework in Frameworks */,
+				C4D4D4BB1AF9DE660097F51A /* libz.dylib in Frameworks */,
+				C4D4D4B91AF9DE600097F51A /* libicucore.dylib in Frameworks */,
+				C4D4D4B61AF9DE1D0097F51A /* CFNetwork.framework in Frameworks */,
+				C4D4D4B21AF9DDF80097F51A /* MobileCoreServices.framework in Frameworks */,
+				C4D4D4B41AF9DE090097F51A /* Security.framework in Frameworks */,
+				C4D4D4B01AF9DDE20097F51A /* Simperium.framework in Frameworks */,
 				26156ACC14EC3D4C003332BA /* UIKit.framework in Frameworks */,
 				26156ACE14EC3D4C003332BA /* Foundation.framework in Frameworks */,
 				26156AD014EC3D4C003332BA /* CoreGraphics.framework in Frameworks */,
@@ -116,6 +135,13 @@
 		26156ACA14EC3D4C003332BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C4D4D4BC1AF9DE760097F51A /* SystemConfiguration.framework */,
+				C4D4D4BA1AF9DE660097F51A /* libz.dylib */,
+				C4D4D4B81AF9DE600097F51A /* libicucore.dylib */,
+				C4D4D4B51AF9DE1D0097F51A /* CFNetwork.framework */,
+				C4D4D4B31AF9DE090097F51A /* Security.framework */,
+				C4D4D4B11AF9DDF80097F51A /* MobileCoreServices.framework */,
+				C4D4D4AF1AF9DDE20097F51A /* Simperium.framework */,
 				26156ACB14EC3D4C003332BA /* UIKit.framework */,
 				26156ACD14EC3D4C003332BA /* Foundation.framework */,
 				26156ACF14EC3D4C003332BA /* CoreGraphics.framework */,
@@ -376,6 +402,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../..\"",
+					"/Users/anshuqiang/Git/CustomSimperium/simperium-ios/out",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simpletodo/Simpletodo-Prefix.pch";
@@ -394,6 +421,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../..\"",
+					"/Users/anshuqiang/Git/CustomSimperium/simperium-ios/out",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simpletodo/Simpletodo-Prefix.pch";

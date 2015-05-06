@@ -33,10 +33,19 @@
         SPMasterViewController *controller = (SPMasterViewController *)navigationController.topViewController;
         controller.managedObjectContext = self.managedObjectContext;
     }
-        
+    
+    ///////////////////
+    self.simperium = [[Simperium alloc] initWithModel:self.managedObjectModel
+                                              context:self.managedObjectContext
+                                          coordinator:self.persistentStoreCoordinator];
+    
+    [self.simperium authenticateWithAppID:@"tut-primitives-hush-7ac"
+                                   APIKey:@"e73c854bc34e44d783f8867433651034"
+                       rootViewController:_window.rootViewController];
+    
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     /*
@@ -48,7 +57,7 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
     /*
-     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
      If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
      */
 }
@@ -84,11 +93,11 @@
             /*
              Replace this implementation with code to handle the error appropriately.
              
-             abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+             abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
              */
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
-        } 
+        }
     }
 }
 
@@ -104,9 +113,9 @@
     {
         return __managedObjectContext;
     }
-	
-	__managedObjectContext = [[NSManagedObjectContext alloc] init];
-	__managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator;
+    
+    __managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+    //	__managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator;
     return __managedObjectContext;
 }
 
@@ -145,7 +154,7 @@
         /*
          Replace this implementation with code to handle the error appropriately.
          
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
          
          Typical reasons for an error here include:
          * The persistent store is not accessible;
@@ -159,7 +168,7 @@
          * Simply deleting the existing store:
          [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil]
          
-         * Performing automatic lightweight migration by passing the following dictionary as the options parameter: 
+         * Performing automatic lightweight migration by passing the following dictionary as the options parameter:
          [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption, [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
          
          Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
@@ -167,7 +176,7 @@
          */
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
-    }    
+    }
     
     return __persistentStoreCoordinator;
 }
