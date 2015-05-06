@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import <Simperium/SPManagedObject.h>
 
-@interface Todo : NSManagedObject
+@interface Todo : SPManagedObject
 
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSNumber * order;
